@@ -21,6 +21,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="xunit.abstractions" />
     <Reference Include="xunit.runner.utility.desktop" />
+    <Reference Include="xunit.execution.directrefmono" />
   </References>
   <Files>
     <Compile Include="..\common\AssemblyExtensions.cs">

@@ -4,8 +4,8 @@
     <CustomDefinitions>
       <Platform Name="Android">TRACE;XUNIT_CORE_DLL;NET45</Platform>
       <Platform Name="iOS">TRACE;XUNIT_CORE_DLL;NET45</Platform>
-      <Platform Name="Linux">TRACE;XUNIT_CORE_DLL;NET45</Platform>
-      <Platform Name="MacOS">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="Linux">TRACE;XUNIT_CORE_DLL;NET45;PLATFORM_LINUX</Platform>
+      <Platform Name="MacOS">TRACE;XUNIT_CORE_DLL;NET45;PLATFORM_MACOS</Platform>
       <Platform Name="Ouya">TRACE;XUNIT_CORE_DLL;NET45</Platform>
       <Platform Name="PSMobile">TRACE;XUNIT_CORE_DLL;NET45</Platform>
       <Platform Name="Windows">TRACE;XUNIT_CORE_DLL;NET45</Platform>

@@ -87,6 +87,13 @@ namespace Xunit
         /// </summary>
         protected virtual IFrontController CreateInnerController()
         {
+#if PLATFORM_LINUX || PLATFORM_MACOS
+            // HACK: Force a load of the TestFrameworkProxy type and by association,
+            // the xunit.execution.desktop DLL.
+            var type = typeof(Xunit.Sdk.TestFrameworkProxy);
+            return new Xunit2(sourceInformationProvider, assemblyFileName, configFileName, shadowCopy, shadowCopyFolder);
+#endif
+
             // TODO: Refactor this method -- too many ifdefs
 #if !XAMARIN && !WINDOWS_PHONE_APP && !WINDOWS_PHONE
             var xunitPath = Path.Combine(Path.GetDirectoryName(assemblyFileName), "xunit.dll");

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExternalProject Name="xunit.execution.directrefmono">
+
+  <Platform Name="MacOS">
+    <Reference Include="xunit.execution.desktop" />
+  </Platform>
+
+  <Platform Name="Linux">
+    <Reference Include="xunit.execution.desktop" />
+  </Platform>
+
+</ExternalProject>

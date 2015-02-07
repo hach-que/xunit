@@ -41,6 +41,14 @@ namespace Xunit
                          string shadowCopyFolder)
         {
             Guard.ArgumentNotNull("assemblyInfo", (object)assemblyInfo ?? assemblyFileName);
+
+#if PLATFORM_LINUX || PLATFORM_MACOS
+            appDomain = new RemoteAppDomainManager(assemblyFileName ?? xunitExecutionAssemblyPath, configFileName, shadowCopy, shadowCopyFolder);
+
+            assemblyInfo = new Xunit.Sdk.ReflectionAssemblyInfo(assemblyFileName);
+            framework = new Xunit.Sdk.TestFrameworkProxy(assemblyInfo, sourceInformationProvider);
+            discoverer = framework.GetDiscoverer(assemblyInfo);
+#else
             Guard.FileExists("xunitExecutionAssemblyPath", xunitExecutionAssemblyPath);
 
             appDomain = new RemoteAppDomainManager(assemblyFileName ?? xunitExecutionAssemblyPath, configFileName, shadowCopy, shadowCopyFolder);
@@ -53,6 +61,7 @@ namespace Xunit
 
             framework = appDomain.CreateObject<ITestFramework>(testFrameworkAssemblyName, "Xunit.Sdk.TestFrameworkProxy", assemblyInfo, sourceInformationProvider);
             discoverer = Framework.GetDiscoverer(assemblyInfo);
+#endif
         }
 
         private static string GetTestFrameworkAssemblyName(string xunitExecutionAssemblyPath)

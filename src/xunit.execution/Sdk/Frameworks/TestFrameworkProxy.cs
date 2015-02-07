@@ -5,6 +5,25 @@ using Xunit.Abstractions;
 
 namespace Xunit.Sdk
 {
+#if PLATFORM_LINUX || PLATFORM_MACOS
+    /// <summary>
+    /// An implementation of <see cref="ISourceInformationProvider"/> that always returns no
+    /// source information. Useful for test runners which don't need or cannot provide source
+    /// information during discovery.
+    /// </summary>
+    public class NullMonoSourceInformationProvider : LongLivedMarshalByRefObject, ISourceInformationProvider
+    {
+        /// <inheritdoc/>
+        public ISourceInformation GetSourceInformation(ITestCase testCase)
+        {
+            return new SourceInformation();
+        }
+
+        /// <inheritdoc/>
+        public void Dispose() { }
+    }
+#endif
+
     /// <summary>
     /// This class proxies for the real implementation of <see cref="ITestFramework"/>, based on
     /// whether the user has overridden the choice via <see cref="TestFrameworkAttribute"/>. If
@@ -19,6 +38,10 @@ namespace Xunit.Sdk
         /// <param name="sourceInformationProviderObject">The source information provider (expected to implement <see cref="ISourceInformationProvider"/>).</param>
         public TestFrameworkProxy(object testAssemblyObject, object sourceInformationProviderObject)
         {
+#if PLATFORM_LINUX || PLATFORM_MACOS
+            InnerTestFramework = new XunitTestFramework();
+            SourceInformationProvider =  new NullMonoSourceInformationProvider();
+#else
             var testAssembly = (IAssemblyInfo)testAssemblyObject;
             var sourceInformationProvider = (ISourceInformationProvider)sourceInformationProviderObject;
 
@@ -56,6 +79,7 @@ namespace Xunit.Sdk
             }
 
             SourceInformationProvider = sourceInformationProvider;
+#endif
         }
 
         /// <summary>
