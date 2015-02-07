@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Name="xunit.console" Path="src\xunit.console" Type="Console" Platforms="Windows,MacOS,Linux">
   <Properties>
     <FrameworkVersions>
@@ -59,14 +59,14 @@
     <Compile Include="Utility\StackFrameTransformer.cs" />
     <Compile Include="Utility\Transform.cs" />
     <Compile Include="Utility\TransformFactory.cs" />
-    <Compile Include="Visitors\AppVeyorVisitor.cs" />
     <Compile Include="Visitors\AppVeyorLogger.cs" />
+    <Compile Include="Visitors\AppVeyorVisitor.cs" />
     <Compile Include="Visitors\StandardOutputVisitor.cs" />
     <Compile Include="Visitors\TeamCityVisitor.cs" />
-    <Content Include="xUnit1.xslt">
+    <Content Include="HTML.xslt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="HTML.xslt">
+    <Content Include="xUnit1.xslt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="App.config" />

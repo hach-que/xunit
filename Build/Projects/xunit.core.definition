@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Name="xunit.core" Path="src\xunit.core" Type="Library">
   <Properties>
     <CustomDefinitions>
@@ -56,16 +56,16 @@
     <Compile Include="CollectionBehavior.cs" />
     <Compile Include="CollectionBehaviorAttribute.cs" />
     <Compile Include="CollectionDefinitionAttribute.cs" />
+    <Compile Include="Extensions\PropertyDataAttribute.cs" />
     <Compile Include="FactAttribute.cs" />
     <Compile Include="IClassFixture.cs" />
     <Compile Include="ICollectionFixture.cs" />
     <Compile Include="InlineDataAttribute.cs" />
     <Compile Include="ITestCollectionOrderer.cs" />
     <Compile Include="MemberDataAttribute.cs" />
-    <Compile Include="Extensions\PropertyDataAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sdk\BeforeAfterTestAttribute.cs" />
     <Compile Include="Sdk\DataAttribute.cs" />
-    <Compile Include="Sdk\MemberDataDiscoverer.cs" />
     <Compile Include="Sdk\DataDiscoverer.cs" />
     <Compile Include="Sdk\DataDiscovererAttribute.cs" />
     <Compile Include="Sdk\ExceptionAggregator.cs" />
@@ -78,29 +78,28 @@
     <Compile Include="Sdk\ITestFrameworkTypeDiscoverer.cs" />
     <Compile Include="Sdk\ITraitAttribute.cs" />
     <Compile Include="Sdk\ITraitDiscoverer.cs" />
-    <Compile Include="Sdk\IXunitTestCaseDiscoverer.cs" />
     <Compile Include="Sdk\IXunitTestCase.cs" />
+    <Compile Include="Sdk\IXunitTestCaseDiscoverer.cs" />
     <Compile Include="Sdk\IXunitTestCollectionFactory.cs" />
+    <Compile Include="Sdk\MemberDataDiscoverer.cs" />
     <Compile Include="Sdk\RunSummary.cs" />
     <Compile Include="Sdk\TestFrameworkDiscovererAttribute.cs" />
-    <Compile Include="Sdk\XunitTestCaseDiscovererAttribute.cs" />
     <Compile Include="Sdk\TraitDiscoverer.cs" />
     <Compile Include="Sdk\TraitDiscovererAttribute.cs" />
-    <Compile Include="TestCollectionOrdererAttribute.cs" />
+    <Compile Include="Sdk\XunitTestCaseDiscovererAttribute.cs" />
     <Compile Include="TestCaseOrdererAttribute.cs" />
+    <Compile Include="TestCollectionOrdererAttribute.cs" />
     <Compile Include="TestFrameworkAttribute.cs" />
     <Compile Include="TheoryAttribute.cs" />
     <Compile Include="TheoryData.cs" />
     <Compile Include="TraitAttribute.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="build\xunit.core.win8.targets" />
-    <None Include="build\xunit.core.WithDesktop.props" />
     <None Include="build\xunit.core.props" />
     <None Include="build\xunit.core.universal.targets" />
+    <None Include="build\xunit.core.win8.targets" />
+    <None Include="build\xunit.core.WithDesktop.props" />
     <None Include="build\xunit.core.wp8.targets" />
     <None Include="xunit.core.dll.tdnet">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml" />
   </Files>
 </Project>

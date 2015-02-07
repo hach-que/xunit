@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Name="xunit.runner.utility.desktop" Path="src\xunit.runner.utility.desktop" Type="Library" Platforms="Windows,MacOS,Linux">
   <Properties>
     <FrameworkVersions>
@@ -47,6 +47,9 @@
     <Compile Include="..\common\ExecutionHelper.cs">
       <Link>Common\ExecutionHelper.cs</Link>
     </Compile>
+    <Compile Include="..\common\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="..\common\Guard.cs">
       <Link>Common\Guard.cs</Link>
     </Compile>
@@ -74,11 +77,173 @@
     <Compile Include="..\common\TestOptionsNames.cs">
       <Link>Common\TestOptionsNames.cs</Link>
     </Compile>
-    <Compile Include="..\common\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="..\common\XunitSerializationInfo.cs">
       <Link>Common\XunitSerializationInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\AfterTestFinished.cs">
+      <Link>Messages/AfterTestFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\AfterTestStarting.cs">
+      <Link>Messages/AfterTestStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\BaseMessages\TestAssemblyMessage.cs">
+      <Link>Messages/BaseMessages/TestAssemblyMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\BaseMessages\TestCaseMessage.cs">
+      <Link>Messages/BaseMessages/TestCaseMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\BaseMessages\TestClassMessage.cs">
+      <Link>Messages/BaseMessages/TestClassMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\BaseMessages\TestCollectionMessage.cs">
+      <Link>Messages/BaseMessages/TestCollectionMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\BaseMessages\TestMessage.cs">
+      <Link>Messages/BaseMessages/TestMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\BaseMessages\TestMethodMessage.cs">
+      <Link>Messages/BaseMessages/TestMethodMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\BaseMessages\TestResultMessage.cs">
+      <Link>Messages/BaseMessages/TestResultMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\BeforeTestFinished.cs">
+      <Link>Messages/BeforeTestFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\BeforeTestStarting.cs">
+      <Link>Messages/BeforeTestStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\DiagnosticMessage.cs">
+      <Link>Messages/DiagnosticMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\DiscoveryCompleteMessage.cs">
+      <Link>Messages/DiscoveryCompleteMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\ErrorMessage.cs">
+      <Link>Messages/ErrorMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestAssemblyCleanupFailure.cs">
+      <Link>Messages/TestAssemblyCleanupFailure.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestAssemblyFinished.cs">
+      <Link>Messages/TestAssemblyFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestAssemblyStarting.cs">
+      <Link>Messages/TestAssemblyStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestCaseCleanupFailure.cs">
+      <Link>Messages/TestCaseCleanupFailure.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestCaseDiscoveryMessage.cs">
+      <Link>Messages/TestCaseDiscoveryMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestCaseFinished.cs">
+      <Link>Messages/TestCaseFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestCaseStarting.cs">
+      <Link>Messages/TestCaseStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestClassCleanupFailure.cs">
+      <Link>Messages/TestClassCleanupFailure.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestClassConstructionFinished.cs">
+      <Link>Messages/TestClassConstructionFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestClassConstructionStarting.cs">
+      <Link>Messages/TestClassConstructionStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestClassDisposeFinished.cs">
+      <Link>Messages/TestClassDisposeFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestClassDisposeStarting.cs">
+      <Link>Messages/TestClassDisposeStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestClassFinished.cs">
+      <Link>Messages/TestClassFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestClassStarting.cs">
+      <Link>Messages/TestClassStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestCleanupFailure.cs">
+      <Link>Messages/TestCleanupFailure.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestCollectionCleanupFailure.cs">
+      <Link>Messages/TestCollectionCleanupFailure.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestCollectionFinished.cs">
+      <Link>Messages/TestCollectionFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestCollectionStarting.cs">
+      <Link>Messages/TestCollectionStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestFailed.cs">
+      <Link>Messages/TestFailed.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestFinished.cs">
+      <Link>Messages/TestFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestMethodCleanupFailure.cs">
+      <Link>Messages/TestMethodCleanupFailure.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestMethodFinished.cs">
+      <Link>Messages/TestMethodFinished.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestMethodStarting.cs">
+      <Link>Messages/TestMethodStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestOutput.cs">
+      <Link>Messages/TestOutput.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestPassed.cs">
+      <Link>Messages/TestPassed.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestSkipped.cs">
+      <Link>Messages/TestSkipped.cs</Link>
+    </Compile>
+    <Compile Include="..\messages\TestStarting.cs">
+      <Link>Messages/TestStarting.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Extensions\TestFrameworkOptionsReadWriteExtensions.cs">
+      <Link>Extensions/TestFrameworkOptionsReadWriteExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Frameworks\IFrontController.cs">
+      <Link>Frameworks/IFrontController.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Frameworks\NullSourceInformationProvider.cs">
+      <Link>Frameworks/NullSourceInformationProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Frameworks\TestAssemblyConfiguration.cs">
+      <Link>Frameworks/TestAssemblyConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Frameworks\TestFrameworkOptions.cs">
+      <Link>Frameworks/TestFrameworkOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Frameworks\v2\Xunit2.cs">
+      <Link>Frameworks/v2/Xunit2.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Frameworks\v2\Xunit2Discoverer.cs">
+      <Link>Frameworks/v2/Xunit2Discoverer.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Frameworks\XunitFrontController.cs">
+      <Link>Frameworks/XunitFrontController.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Project\XunitFilters.cs">
+      <Link>Project/XunitFilters.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Project\XunitProject.cs">
+      <Link>Project/XunitProject.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Project\XunitProjectAssembly.cs">
+      <Link>Project/XunitProjectAssembly.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Properties\AssemblyInfo.cs">
+      <Link>Properties/AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Utility\ExecutionSummary.cs">
+      <Link>Utility/ExecutionSummary.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.runner.utility\Utility\RemotingUtility.cs">
+      <Link>Utility/RemotingUtility.cs</Link>
     </Compile>
     <Compile Include="Frameworks\v1\IXunit1Executor.cs" />
     <Compile Include="Frameworks\v1\TestClassCallbackHandler.cs" />
@@ -97,60 +262,5 @@
     <Compile Include="Utility\DiaSession.cs" />
     <Compile Include="Utility\DiaSessionWrapper.cs" />
     <Compile Include="Utility\DiaSessionWrapperHelper.cs" />
-    <Compile Include="../xunit.runner.utility/Frameworks/XunitFrontController.cs"><Link>Frameworks/XunitFrontController.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Frameworks/NullSourceInformationProvider.cs"><Link>Frameworks/NullSourceInformationProvider.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Frameworks/TestFrameworkOptions.cs"><Link>Frameworks/TestFrameworkOptions.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Frameworks/TestAssemblyConfiguration.cs"><Link>Frameworks/TestAssemblyConfiguration.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Frameworks/v2/Xunit2.cs"><Link>Frameworks/v2/Xunit2.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Frameworks/v2/Xunit2Discoverer.cs"><Link>Frameworks/v2/Xunit2Discoverer.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Frameworks/IFrontController.cs"><Link>Frameworks/IFrontController.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Project/XunitProject.cs"><Link>Project/XunitProject.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Project/XunitProjectAssembly.cs"><Link>Project/XunitProjectAssembly.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Project/XunitFilters.cs"><Link>Project/XunitFilters.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Utility/ExecutionSummary.cs"><Link>Utility/ExecutionSummary.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Utility/RemotingUtility.cs"><Link>Utility/RemotingUtility.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Properties/AssemblyInfo.cs"><Link>Properties/AssemblyInfo.cs</Link></Compile>
-    <Compile Include="../xunit.runner.utility/Extensions/TestFrameworkOptionsReadWriteExtensions.cs"><Link>Extensions/TestFrameworkOptionsReadWriteExtensions.cs</Link></Compile>
-    <Compile Include="../messages/TestFinished.cs"><Link>Messages/TestFinished.cs</Link></Compile>
-    <Compile Include="../messages/TestClassConstructionStarting.cs"><Link>Messages/TestClassConstructionStarting.cs</Link></Compile>
-    <Compile Include="../messages/TestClassStarting.cs"><Link>Messages/TestClassStarting.cs</Link></Compile>
-    <Compile Include="../messages/TestCollectionStarting.cs"><Link>Messages/TestCollectionStarting.cs</Link></Compile>
-    <Compile Include="../messages/TestCollectionCleanupFailure.cs"><Link>Messages/TestCollectionCleanupFailure.cs</Link></Compile>
-    <Compile Include="../messages/TestMethodCleanupFailure.cs"><Link>Messages/TestMethodCleanupFailure.cs</Link></Compile>
-    <Compile Include="../messages/TestCleanupFailure.cs"><Link>Messages/TestCleanupFailure.cs</Link></Compile>
-    <Compile Include="../messages/TestCaseFinished.cs"><Link>Messages/TestCaseFinished.cs</Link></Compile>
-    <Compile Include="../messages/TestFailed.cs"><Link>Messages/TestFailed.cs</Link></Compile>
-    <Compile Include="../messages/TestClassDisposeStarting.cs"><Link>Messages/TestClassDisposeStarting.cs</Link></Compile>
-    <Compile Include="../messages/DiscoveryCompleteMessage.cs"><Link>Messages/DiscoveryCompleteMessage.cs</Link></Compile>
-    <Compile Include="../messages/TestCaseStarting.cs"><Link>Messages/TestCaseStarting.cs</Link></Compile>
-    <Compile Include="../messages/TestOutput.cs"><Link>Messages/TestOutput.cs</Link></Compile>
-    <Compile Include="../messages/TestCaseDiscoveryMessage.cs"><Link>Messages/TestCaseDiscoveryMessage.cs</Link></Compile>
-    <Compile Include="../messages/TestAssemblyFinished.cs"><Link>Messages/TestAssemblyFinished.cs</Link></Compile>
-    <Compile Include="../messages/BaseMessages/TestAssemblyMessage.cs"><Link>Messages/BaseMessages/TestAssemblyMessage.cs</Link></Compile>
-    <Compile Include="../messages/BaseMessages/TestCaseMessage.cs"><Link>Messages/BaseMessages/TestCaseMessage.cs</Link></Compile>
-    <Compile Include="../messages/BaseMessages/TestMessage.cs"><Link>Messages/BaseMessages/TestMessage.cs</Link></Compile>
-    <Compile Include="../messages/BaseMessages/TestResultMessage.cs"><Link>Messages/BaseMessages/TestResultMessage.cs</Link></Compile>
-    <Compile Include="../messages/BaseMessages/TestMethodMessage.cs"><Link>Messages/BaseMessages/TestMethodMessage.cs</Link></Compile>
-    <Compile Include="../messages/BaseMessages/TestClassMessage.cs"><Link>Messages/BaseMessages/TestClassMessage.cs</Link></Compile>
-    <Compile Include="../messages/BaseMessages/TestCollectionMessage.cs"><Link>Messages/BaseMessages/TestCollectionMessage.cs</Link></Compile>
-    <Compile Include="../messages/TestMethodStarting.cs"><Link>Messages/TestMethodStarting.cs</Link></Compile>
-    <Compile Include="../messages/DiagnosticMessage.cs"><Link>Messages/DiagnosticMessage.cs</Link></Compile>
-    <Compile Include="../messages/BeforeTestFinished.cs"><Link>Messages/BeforeTestFinished.cs</Link></Compile>
-    <Compile Include="../messages/AfterTestStarting.cs"><Link>Messages/AfterTestStarting.cs</Link></Compile>
-    <Compile Include="../messages/AfterTestFinished.cs"><Link>Messages/AfterTestFinished.cs</Link></Compile>
-    <Compile Include="../messages/TestClassFinished.cs"><Link>Messages/TestClassFinished.cs</Link></Compile>
-    <Compile Include="../messages/TestSkipped.cs"><Link>Messages/TestSkipped.cs</Link></Compile>
-    <Compile Include="../messages/TestMethodFinished.cs"><Link>Messages/TestMethodFinished.cs</Link></Compile>
-    <Compile Include="../messages/TestPassed.cs"><Link>Messages/TestPassed.cs</Link></Compile>
-    <Compile Include="../messages/TestAssemblyStarting.cs"><Link>Messages/TestAssemblyStarting.cs</Link></Compile>
-    <Compile Include="../messages/TestAssemblyCleanupFailure.cs"><Link>Messages/TestAssemblyCleanupFailure.cs</Link></Compile>
-    <Compile Include="../messages/TestClassDisposeFinished.cs"><Link>Messages/TestClassDisposeFinished.cs</Link></Compile>
-    <Compile Include="../messages/TestStarting.cs"><Link>Messages/TestStarting.cs</Link></Compile>
-    <Compile Include="../messages/BeforeTestStarting.cs"><Link>Messages/BeforeTestStarting.cs</Link></Compile>
-    <Compile Include="../messages/TestCaseCleanupFailure.cs"><Link>Messages/TestCaseCleanupFailure.cs</Link></Compile>
-    <Compile Include="../messages/TestClassConstructionFinished.cs"><Link>Messages/TestClassConstructionFinished.cs</Link></Compile>
-    <Compile Include="../messages/TestClassCleanupFailure.cs"><Link>Messages/TestClassCleanupFailure.cs</Link></Compile>
-    <Compile Include="../messages/ErrorMessage.cs"><Link>Messages/ErrorMessage.cs</Link></Compile>
-    <Compile Include="../messages/TestCollectionFinished.cs"><Link>Messages/TestCollectionFinished.cs</Link></Compile>
   </Files>
 </Project>
