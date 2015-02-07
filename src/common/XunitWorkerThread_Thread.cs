@@ -18,6 +18,13 @@ namespace Xunit.Sdk
             thread.Join();
         }
 
+#if PLATFORM_LINUX || PLATFORM_MACOS
+        public void Abort()
+        {
+            thread.Abort();
+        }
+#endif
+
         public static void QueueUserWorkItem(Action backgroundTask)
         {
             ThreadPool.QueueUserWorkItem(_ => backgroundTask());

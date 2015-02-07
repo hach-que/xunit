@@ -34,6 +34,16 @@ namespace Xunit.Sdk
         {
             terminate.Set();
 
+#if PLATFORM_LINUX || PLATFORM_MACOS
+            // Mono hangs if the worker threads are joined here; since this occurs
+            // after all the tests have been reported, just abort the threads.
+            foreach (var workerThread in workerThreads)
+                workerThread.Abort();
+#else
+            foreach (var workerThread in workerThreads)
+                workerThread.Join();
+#endif
+
             foreach (var workerThread in workerThreads)
                 workerThread.Join();
 
