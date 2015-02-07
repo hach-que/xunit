@@ -29,3 +29,8 @@ Test*.xml
 
 Index.dat
 Storage.dat
+
+*.csproj
+*.sln
+*.speccache
+*.userprefs

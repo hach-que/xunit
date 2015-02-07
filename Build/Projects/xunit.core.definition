@@ -26,6 +26,8 @@
     </FrameworkVersions>
   </Properties>
   <References>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
     <Reference Include="xunit.abstractions" />
   </References>
   <Files>

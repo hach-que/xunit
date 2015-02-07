@@ -1,44 +1,35 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{80B04AFE-4331-4CDD-B247-864AC6482F7C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Xunit</RootNamespace>
-    <AssemblyName>xunit.assert</AssemblyName>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\Signing.snk</AssemblyOriginatorKeyFile>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
-    <FileAlignment>512</FileAlignment>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\xunit.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NEW_REFLECTION</DefineConstants>
-    <DocumentationFile>bin\Debug\xunit.assert.xml</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;NEW_REFLECTION</DefineConstants>
-    <DocumentationFile>bin\Release\xunit.assert.xml</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <ItemGroup>
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="xunit.assert" Path="src\xunit.assert" Type="Library">
+  <Properties>
+    <CustomDefinitions>
+      <Platform Name="Android">TRACE;NEW_REFLECTION</Platform>
+      <Platform Name="iOS">TRACE;NEW_REFLECTION</Platform>
+      <Platform Name="Linux">TRACE;NEW_REFLECTION</Platform>
+      <Platform Name="MacOS">TRACE;NEW_REFLECTION</Platform>
+      <Platform Name="Ouya">TRACE;NEW_REFLECTION</Platform>
+      <Platform Name="PSMobile">TRACE;NEW_REFLECTION</Platform>
+      <Platform Name="Windows">TRACE;NEW_REFLECTION</Platform>
+      <Platform Name="Windows8">TRACE;NEW_REFLECTION</Platform>
+      <Platform Name="WindowsGL">TRACE;NEW_REFLECTION</Platform>
+      <Platform Name="WindowsPhone">TRACE;NEW_REFLECTION</Platform>
+    </CustomDefinitions>
+    <FrameworkVersions>
+      <Platform Name="Windows">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="MacOS">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="Linux">
+        <Version>v4.5</Version>
+      </Platform>
+    </FrameworkVersions>
+  </Properties>
+  <References>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+  </References>
+  <Files>
     <Compile Include="Asserts\Assert.cs" />
     <Compile Include="Asserts\BooleanAsserts.cs" />
     <Compile Include="Asserts\CollectionAsserts.cs" />
@@ -96,16 +87,6 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  </Files>
 </Project>
