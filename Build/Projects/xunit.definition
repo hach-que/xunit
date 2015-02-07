@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExternalProject Name="xunit">
+
+  <Reference Include="xunit.abstractions" />
+  <Reference Include="xunit.assert" />
+  <Reference Include="xunit.core" />
+
+  <!-- On Linux and Mac, the dependencies are inverse -->
+  <Platform Type="Windows">
+    <Reference Include="xunit.execution.desktop" />
+  </Platform>
+
+</ExternalProject>
