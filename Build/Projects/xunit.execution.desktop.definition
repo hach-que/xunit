@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="xunit.execution.desktop" Path="src\xunit.execution.desktop" Type="Library" Platforms="Windows,MacOS,Linux">
+  <Properties>
+    <CustomDefinitions>
+      <Platform Name="Android">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="iOS">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="Linux">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="MacOS">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="Ouya">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="PSMobile">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="Windows">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="Windows8">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="WindowsGL">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+      <Platform Name="WindowsPhone">TRACE;XUNIT_CORE_DLL;NET45</Platform>
+    </CustomDefinitions>
+    <FrameworkVersions>
+      <Platform Name="Windows">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="MacOS">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="Linux">
+        <Version>v4.5</Version>
+      </Platform>
+    </FrameworkVersions>
+  </Properties>
+  <References>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="xunit.abstractions" />
+    <Reference Include="xunit.core" />
+  </References>
+  <Files>
+    <Compile Include="..\common\AssemblyExtensions.cs">
+      <Link>Common\AssemblyExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\common\DictionaryExtensions.cs">
+      <Link>Common\DictionaryExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\common\ExceptionExtensions.cs">
+      <Link>Common\ExceptionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\common\ExceptionUtility.cs">
+      <Link>Common\ExceptionUtility.cs</Link>
+    </Compile>
+    <Compile Include="..\common\ExecutionHelper.cs">
+      <Link>Common\ExecutionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\common\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\common\Guard.cs">
+      <Link>Common\Guard.cs</Link>
+    </Compile>
+    <Compile Include="..\common\LongLivedMarshalByRefObject_Execution.cs">
+      <Link>Common\LongLivedMarshalByRefObject_Execution.cs</Link>
+    </Compile>
+    <Compile Include="..\common\SerializationHelper.cs">
+      <Link>Common\SerializationHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\common\SourceInformation.cs">
+      <Link>Common\SourceInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\common\TestDiscoveryVisitor.cs">
+      <Link>Common\TestDiscoveryVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\common\TestMessageVisitor.cs">
+      <Link>Common\TestMessageVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\common\TestOptionsNames.cs">
+      <Link>Common\TestOptionsNames.cs</Link>
+    </Compile>
+    <Compile Include="..\common\XunitSerializationInfo.cs">
+      <Link>Common\XunitSerializationInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\common\XunitWorkerThread_Thread.cs">
+      <Link>Common\XunitWorkerThread_Thread.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.assert\Asserts\Sdk\ArgumentFormatter.cs">
+      <Link>Common\ArgumentFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.assert\Asserts\Sdk\AssertEqualityComparer.cs">
+      <Link>Sdk\AssertEqualityComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\xunit.assert\Asserts\Sdk\AssertEqualityComparerAdapter.cs">
+      <Link>Sdk\AssertEqualityComparerAdapter.cs</Link>
+    </Compile>
+    <Compile Include="../xunit.execution/Sdk/MaxConcurrencySyncContext.cs"><Link>Sdk/MaxConcurrencySyncContext.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/ExtensibilityPointFactory.cs"><Link>Sdk/ExtensibilityPointFactory.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Messages/DelegatingMessageSink.cs"><Link>Sdk/Messages/DelegatingMessageSink.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Messages/DelegatingMessageBus.cs"><Link>Sdk/Messages/DelegatingMessageBus.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Reflection/ReflectionMethodInfo.cs"><Link>Sdk/Reflection/ReflectionMethodInfo.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Reflection/ReflectionAssemblyInfo.cs"><Link>Sdk/Reflection/ReflectionAssemblyInfo.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Reflection/ReflectionAttributeInfo.cs"><Link>Sdk/Reflection/ReflectionAttributeInfo.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Reflection/ReflectionParameterInfo.cs"><Link>Sdk/Reflection/ReflectionParameterInfo.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Reflection/ReflectionTypeInfo.cs"><Link>Sdk/Reflection/ReflectionTypeInfo.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Reflection/Reflector.cs"><Link>Sdk/Reflection/Reflector.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/TestClassException.cs"><Link>Sdk/TestClassException.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/TypeUtility.cs"><Link>Sdk/TypeUtility.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/DisposalTracker.cs"><Link>Sdk/DisposalTracker.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/AsyncTestSyncContext.cs"><Link>Sdk/AsyncTestSyncContext.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestFramework.cs"><Link>Sdk/Frameworks/TestFramework.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/CollectionPerAssemblyTestCollectionFactory.cs"><Link>Sdk/Frameworks/CollectionPerAssemblyTestCollectionFactory.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/XunitTestFrameworkDiscoverer.cs"><Link>Sdk/Frameworks/XunitTestFrameworkDiscoverer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestMethodComparer.cs"><Link>Sdk/Frameworks/TestMethodComparer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TheoryDiscoverer.cs"><Link>Sdk/Frameworks/TheoryDiscoverer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/LambdaTestCase.cs"><Link>Sdk/Frameworks/LambdaTestCase.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/XunitTestCase.cs"><Link>Sdk/Frameworks/XunitTestCase.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestClassComparer.cs"><Link>Sdk/Frameworks/TestClassComparer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestFrameworkDiscoverer.cs"><Link>Sdk/Frameworks/TestFrameworkDiscoverer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestAssembly.cs"><Link>Sdk/Frameworks/TestAssembly.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestCollectionFactoryHelper.cs"><Link>Sdk/Frameworks/TestCollectionFactoryHelper.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestFrameworkExecutor.cs"><Link>Sdk/Frameworks/TestFrameworkExecutor.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestMethod.cs"><Link>Sdk/Frameworks/TestMethod.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestCollection.cs"><Link>Sdk/Frameworks/TestCollection.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestMethodTestCase.cs"><Link>Sdk/Frameworks/TestMethodTestCase.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestCollectionComparer.cs"><Link>Sdk/Frameworks/TestCollectionComparer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/ExecutionTimer.cs"><Link>Sdk/Frameworks/ExecutionTimer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestOutputHelper.cs"><Link>Sdk/Frameworks/TestOutputHelper.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/CollectionPerClassTestCollectionFactory.cs"><Link>Sdk/Frameworks/CollectionPerClassTestCollectionFactory.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/XunitTestFramework.cs"><Link>Sdk/Frameworks/XunitTestFramework.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/FactDiscoverer.cs"><Link>Sdk/Frameworks/FactDiscoverer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/XunitTestInvoker.cs"><Link>Sdk/Frameworks/Runners/XunitTestInvoker.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/XunitTestClassRunner.cs"><Link>Sdk/Frameworks/Runners/XunitTestClassRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/XunitTheoryTestCaseRunner.cs"><Link>Sdk/Frameworks/Runners/XunitTheoryTestCaseRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/TestRunner.cs"><Link>Sdk/Frameworks/Runners/TestRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/TestCaseRunner.cs"><Link>Sdk/Frameworks/Runners/TestCaseRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/TestClassRunner.cs"><Link>Sdk/Frameworks/Runners/TestClassRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/XunitTestRunner.cs"><Link>Sdk/Frameworks/Runners/XunitTestRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/TestInvoker.cs"><Link>Sdk/Frameworks/Runners/TestInvoker.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/TestMethodRunner.cs"><Link>Sdk/Frameworks/Runners/TestMethodRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/TestAssemblyRunner.cs"><Link>Sdk/Frameworks/Runners/TestAssemblyRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/TestCollectionRunner.cs"><Link>Sdk/Frameworks/Runners/TestCollectionRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/XunitTestMethodRunner.cs"><Link>Sdk/Frameworks/Runners/XunitTestMethodRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/XunitTestAssemblyRunner.cs"><Link>Sdk/Frameworks/Runners/XunitTestAssemblyRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/XunitTestCollectionRunner.cs"><Link>Sdk/Frameworks/Runners/XunitTestCollectionRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/XunitTestCaseRunner.cs"><Link>Sdk/Frameworks/Runners/XunitTestCaseRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/Runners/LambdaTestCaseRunner.cs"><Link>Sdk/Frameworks/Runners/LambdaTestCaseRunner.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/XunitTestFrameworkExecutor.cs"><Link>Sdk/Frameworks/XunitTestFrameworkExecutor.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestClass.cs"><Link>Sdk/Frameworks/TestClass.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/TestFrameworkProxy.cs"><Link>Sdk/Frameworks/TestFrameworkProxy.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/XunitTest.cs"><Link>Sdk/Frameworks/XunitTest.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Frameworks/XunitTheoryTestCase.cs"><Link>Sdk/Frameworks/XunitTheoryTestCase.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/MaxConcurrencyTaskScheduler.cs"><Link>Sdk/MaxConcurrencyTaskScheduler.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/DefaultTestCaseOrderer.cs"><Link>Sdk/DefaultTestCaseOrderer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/EnvironmentalWarning.cs"><Link>Sdk/EnvironmentalWarning.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/Utility/AsyncManualResetEvent.cs"><Link>Sdk/Utility/AsyncManualResetEvent.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/TestFrameworkTypeDiscoverer.cs"><Link>Sdk/TestFrameworkTypeDiscoverer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/MessageAggregator.cs"><Link>Sdk/MessageAggregator.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/DefaultTestCollectionOrderer.cs"><Link>Sdk/DefaultTestCollectionOrderer.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/SynchronousMessageBus.cs"><Link>Sdk/SynchronousMessageBus.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Sdk/MessageBus.cs"><Link>Sdk/MessageBus.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Properties/AssemblyInfo.cs"><Link>Properties/AssemblyInfo.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Extensions/ReflectionAbstractionExtensions.cs"><Link>Extensions/ReflectionAbstractionExtensions.cs</Link></Compile>
+    <Compile Include="../xunit.execution/Extensions/TestFrameworkOptionsReadExtensions.cs"><Link>Extensions/TestFrameworkOptionsReadExtensions.cs</Link></Compile>
+    <Compile Include="../messages/TestFinished.cs"><Link>Messages/TestFinished.cs</Link></Compile>
+    <Compile Include="../messages/TestClassConstructionStarting.cs"><Link>Messages/TestClassConstructionStarting.cs</Link></Compile>
+    <Compile Include="../messages/TestClassStarting.cs"><Link>Messages/TestClassStarting.cs</Link></Compile>
+    <Compile Include="../messages/TestCollectionStarting.cs"><Link>Messages/TestCollectionStarting.cs</Link></Compile>
+    <Compile Include="../messages/TestCollectionCleanupFailure.cs"><Link>Messages/TestCollectionCleanupFailure.cs</Link></Compile>
+    <Compile Include="../messages/TestMethodCleanupFailure.cs"><Link>Messages/TestMethodCleanupFailure.cs</Link></Compile>
+    <Compile Include="../messages/TestCleanupFailure.cs"><Link>Messages/TestCleanupFailure.cs</Link></Compile>
+    <Compile Include="../messages/TestCaseFinished.cs"><Link>Messages/TestCaseFinished.cs</Link></Compile>
+    <Compile Include="../messages/TestFailed.cs"><Link>Messages/TestFailed.cs</Link></Compile>
+    <Compile Include="../messages/TestClassDisposeStarting.cs"><Link>Messages/TestClassDisposeStarting.cs</Link></Compile>
+    <Compile Include="../messages/DiscoveryCompleteMessage.cs"><Link>Messages/DiscoveryCompleteMessage.cs</Link></Compile>
+    <Compile Include="../messages/TestCaseStarting.cs"><Link>Messages/TestCaseStarting.cs</Link></Compile>
+    <Compile Include="../messages/TestOutput.cs"><Link>Messages/TestOutput.cs</Link></Compile>
+    <Compile Include="../messages/TestCaseDiscoveryMessage.cs"><Link>Messages/TestCaseDiscoveryMessage.cs</Link></Compile>
+    <Compile Include="../messages/TestAssemblyFinished.cs"><Link>Messages/TestAssemblyFinished.cs</Link></Compile>
+    <Compile Include="../messages/BaseMessages/TestAssemblyMessage.cs"><Link>Messages/BaseMessages/TestAssemblyMessage.cs</Link></Compile>
+    <Compile Include="../messages/BaseMessages/TestCaseMessage.cs"><Link>Messages/BaseMessages/TestCaseMessage.cs</Link></Compile>
+    <Compile Include="../messages/BaseMessages/TestMessage.cs"><Link>Messages/BaseMessages/TestMessage.cs</Link></Compile>
+    <Compile Include="../messages/BaseMessages/TestResultMessage.cs"><Link>Messages/BaseMessages/TestResultMessage.cs</Link></Compile>
+    <Compile Include="../messages/BaseMessages/TestMethodMessage.cs"><Link>Messages/BaseMessages/TestMethodMessage.cs</Link></Compile>
+    <Compile Include="../messages/BaseMessages/TestClassMessage.cs"><Link>Messages/BaseMessages/TestClassMessage.cs</Link></Compile>
+    <Compile Include="../messages/BaseMessages/TestCollectionMessage.cs"><Link>Messages/BaseMessages/TestCollectionMessage.cs</Link></Compile>
+    <Compile Include="../messages/TestMethodStarting.cs"><Link>Messages/TestMethodStarting.cs</Link></Compile>
+    <Compile Include="../messages/DiagnosticMessage.cs"><Link>Messages/DiagnosticMessage.cs</Link></Compile>
+    <Compile Include="../messages/BeforeTestFinished.cs"><Link>Messages/BeforeTestFinished.cs</Link></Compile>
+    <Compile Include="../messages/AfterTestStarting.cs"><Link>Messages/AfterTestStarting.cs</Link></Compile>
+    <Compile Include="../messages/AfterTestFinished.cs"><Link>Messages/AfterTestFinished.cs</Link></Compile>
+    <Compile Include="../messages/TestClassFinished.cs"><Link>Messages/TestClassFinished.cs</Link></Compile>
+    <Compile Include="../messages/TestSkipped.cs"><Link>Messages/TestSkipped.cs</Link></Compile>
+    <Compile Include="../messages/TestMethodFinished.cs"><Link>Messages/TestMethodFinished.cs</Link></Compile>
+    <Compile Include="../messages/TestPassed.cs"><Link>Messages/TestPassed.cs</Link></Compile>
+    <Compile Include="../messages/TestAssemblyStarting.cs"><Link>Messages/TestAssemblyStarting.cs</Link></Compile>
+    <Compile Include="../messages/TestAssemblyCleanupFailure.cs"><Link>Messages/TestAssemblyCleanupFailure.cs</Link></Compile>
+    <Compile Include="../messages/TestClassDisposeFinished.cs"><Link>Messages/TestClassDisposeFinished.cs</Link></Compile>
+    <Compile Include="../messages/TestStarting.cs"><Link>Messages/TestStarting.cs</Link></Compile>
+    <Compile Include="../messages/BeforeTestStarting.cs"><Link>Messages/BeforeTestStarting.cs</Link></Compile>
+    <Compile Include="../messages/TestCaseCleanupFailure.cs"><Link>Messages/TestCaseCleanupFailure.cs</Link></Compile>
+    <Compile Include="../messages/TestClassConstructionFinished.cs"><Link>Messages/TestClassConstructionFinished.cs</Link></Compile>
+    <Compile Include="../messages/TestClassCleanupFailure.cs"><Link>Messages/TestClassCleanupFailure.cs</Link></Compile>
+    <Compile Include="../messages/ErrorMessage.cs"><Link>Messages/ErrorMessage.cs</Link></Compile>
+    <Compile Include="../messages/TestCollectionFinished.cs"><Link>Messages/TestCollectionFinished.cs</Link></Compile>
+  </Files>
+</Project>
