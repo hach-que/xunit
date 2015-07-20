@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Name="xunit.assert" Path="src\xunit.assert" Type="Library">
+<Project Name="xunit.assert" Path="src\xunit.assert" Type="Library" Platforms="Windows,MacOS,Linux">
   <Properties>
     <CustomDefinitions>
       <Platform Name="Android">TRACE;NEW_REFLECTION</Platform>

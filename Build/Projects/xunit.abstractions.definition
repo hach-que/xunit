@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Name="xunit.abstractions" Path="src\xunit.abstractions" Type="Library">
+<Project Name="xunit.abstractions" Path="src\xunit.abstractions" Type="Library" Platforms="Windows,MacOS,Linux">
   <Properties>
     <FrameworkVersions>
       <Platform Name="Windows">

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Name="xunit.core" Path="src\xunit.core" Type="Library">
+<Project Name="xunit.core" Path="src\xunit.core" Type="Library" Platforms="Windows,MacOS,Linux">
   <Properties>
     <CustomDefinitions>
       <Platform Name="Android">TRACE;XUNIT_CORE_DLL;NEW_REFLECTION</Platform>
